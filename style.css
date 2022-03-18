@@ -1,0 +1,38 @@
+body{
+    background-color: #051622;
+    margin:0;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+
+}
+.header{
+        color: #76323F;
+        position: absolute;
+        top: 0%;
+        left: 90%;
+
+    
+}
+.intro {
+    color: #DEB992;
+    font-size: 300%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 40%;
+    text-align: center;
+}
+.Hungry{
+    color: #76323F;
+    font-weight: bold;
+}
+.pizza1 {
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+.pizza2{
+    width: 7%;
+}
