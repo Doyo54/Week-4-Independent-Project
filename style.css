@@ -76,15 +76,15 @@ footer {
   }
 .col-md-1{
    position: absolute;
-   text-align:left;
-   left: 5%;
+   text-align:center;
+   left: 1%;
    top: 20%;
     
 }
 h2{
   position: absolute;
   text-align: center;
-  right: 80%;
+  right: 85%;
   top: 0%;
 }
 .col-md-2{
