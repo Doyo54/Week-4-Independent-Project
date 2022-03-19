@@ -1,7 +1,7 @@
 body{
     background-color: #051622;
-    margin:0;
-    padding: 0;
+    margin:0%;
+    padding: 0%;
     width: fit-content;
     height: fit-content;
 
@@ -11,8 +11,26 @@ body{
         position: absolute;
         top: 0%;
         left: 90%;
-
-    
+}
+.navi{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  min-height: 5vh;
+  width:70%;
+  left: 10%;
+  border-radius: 15px;
+}
+.index, .order, .menu{
+    background-color:#76323F; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 .intro {
     color: #DEB992;
@@ -35,4 +53,64 @@ body{
 }
 .pizza2{
     width: 7%;
+}
+footer {
+    background-color: #323232;
+
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    height: 16%;
+  }
+  
+  footer h2, h3, h4 {
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  
+  footer p {
+    line-height: 1.3em;
+  }
+.col-md-1{
+   position: absolute;
+   text-align:left;
+   left: 5%;
+   top: 20%;
+    
+}
+h2{
+  position: absolute;
+  text-align: center;
+  right: 80%;
+  top: 0%;
+}
+.col-md-2{
+  position: absolute;
+text-align: center;
+right: 45%;
+top: 20%;
+}
+h3{
+  position: absolute;
+  text-align: center;
+  right: 45%;
+  top: 0%;
+}
+.col-md-3{
+  position: absolute;
+  text-align: center;
+  left: 83%;
+  top: 25%;
+ font-size: large;
+ color: #76323F;
+
+}
+h4{
+  position: relative;
+  text-align: center;
+  left: 40%;
+  top: 25%;
 }
