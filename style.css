@@ -129,7 +129,7 @@ h4{
   left:1%;
   top: 100%;
 }
-.order1{
+#order1{
   text-align: justify;
   font-size: xx-large;
   position: absolute;
@@ -148,20 +148,21 @@ h5{
   font-size: xx-large;
   position: absolute;
   padding: 2%;
-  bottom: 60%;
-  left: 190%;
+  bottom: 50%;
+  left: 176%;
   font-size:100%;
 }
 h6{
   position: absolute;
   bottom: 80%;
-  left: 30%;
+  left: 40%;
+  font-size: x-large;
 }
 #checkout{
 position: absolute;
 float: right;
-left: 60%;
-bottom: 20%;
+left: 130%;
+top: 60%;
 }
 .pizza3{
   position: absolute;
@@ -195,4 +196,12 @@ background-color:#DEB992;
 }
 .btn3{
   left: 40%;
+}
+#order-summary{
+  background-color:#051622;
+  color:white;
+  font-weight: bold;
+  font-size: xx-large;
+
+
 }

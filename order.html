@@ -22,12 +22,12 @@
            <img src="./Pizza/pizza2.png" class="pizza2">
            
            <img src="./Pizza/—Pngtree—pizza clipart whole uncut tomato_5600720.png" class="pizza3">
-<div class="order1">
-    <form>
+<div id="order1">
+    <form id="page2">
            <div class="row"id="moto">
             <div class="col-md-6">
               <h5>Place Order</h5>
-              <form id="new-order">
+
                 <div class="form-group">
                   <label>Pizza</label>
                   <select class="custom-select" id="pizza" name="pizza">
@@ -53,7 +53,7 @@
                 <div class="form-group">
                   <label>Topping</label>
                   <select class="custom-select" id="topping" name="topping">
-                    <option value="0">None...</option>
+                    <option value="0">Topping...</option>
                     <option value="1">Pepperoni-50ksh</option>
                     <option value="2">Mushroom-50ksh</option>
                     <option value="3">Sausage-50ksh</option>
@@ -77,8 +77,8 @@
                   </select>
                 </div>
                 <button type="submit" class="btn" id="order-submit">ORDER</button>
-              </form>
             </div>
+        </form>
       
             <div class="row" id="address">
               <h6>Address</h6>
@@ -98,19 +98,20 @@
                 <button type="submit" class="btn2" id="delivery-submit">Submit</button>
               </form>
             </div>
-          </div>
-    
+        
           <div class="row" id="checkout">
             <form id="checkout-form">
               <div class="form-group">
-                <textarea name="checkout" rows="8" cols="80" id="order-summary"></textarea>
-            
+                <textarea name="checkout" rows="5" cols="40" id="order-summary"></textarea>
               </div>
               <div class="form-group">
               <button type="submit" class="btn3" id="checkout-button">Checkout</button>
               </div>
             </form>
           </div>
+          
+        
+            </div>
 
 
 
@@ -135,6 +136,7 @@
                 </div>
                </div>
         </footer>
+        
            
 
 
@@ -148,7 +150,9 @@
 
 
     <link href="./style.css" rel="stylesheet">
-    <link src="./script.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
     
 </body>
 </html>
