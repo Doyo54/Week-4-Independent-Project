@@ -22,7 +22,7 @@ function Order( pizza, topping, crust, size, delivery) {
     return this.priceForSelectedsize + 50 + this.priceForSelectedCrust;
   }
   
-  function Bill(subtotal){
+  function Bill(subtotal){        
     this.subtotalGotten = subtotal;
   }
   
@@ -39,7 +39,6 @@ function Order( pizza, topping, crust, size, delivery) {
       var crustSelected = parseInt($("select#crust").val());
       var selectedSize =parseInt($("select#size").val());
       var selectedDeliveryOption =$("select#delivery").val();
-      var inputtedNumber = $('#mobile').val();
       if (!selectedPizza || !selectedSize || !crustSelected ||!toppingSelected ||!selectedDeliveryOption) {
        alert("** Please select a pizza, size, topping and crust** ");
         return;
