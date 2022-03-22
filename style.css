@@ -182,7 +182,7 @@ thead{
   bottom: 30%;
   width: 25%;
 }
-.btn, .btn2, .btn3{
+.btn, .btn2, .btn3, .btn4{
 background-color:#76323F;
 border: none;
 color: white;
@@ -194,7 +194,11 @@ display: inline-block;
 font-size: 25px;
 position: absolute;
 }
-.btn:hover,.btn2:hover,.btn3:hover {
+.btn4{
+  left: 38%;
+  top: 76%;
+}
+.btn:hover,.btn2:hover,.btn3:hover,.btn4:hover {
 background-color:#DEB992;
   color: #051622;
 }
@@ -213,7 +217,7 @@ background-color:#DEB992;
   background-color:#051622;
   color:white;
   font-weight: bold;
-  font-size: xx-large;
+  font-size: large;
 
 
 }
@@ -228,4 +232,23 @@ background-color:#DEB992;
   bottom: 15%;
   left: 43%;
   font-size: x-large;
+}
+#More{
+  display: none;
+  width: 120px;
+  height:290px ;
+  border: 15px solid #76323F;
+  border-radius: 20px;
+  background-color:white;
+  padding: 50px;
+  padding-top: 0%;
+  margin: 10px;
+  position: absolute;
+  bottom:40%;
+  left: 320%;
+  color: #76323F;
+}
+hr{
+  width: 100%;
+  margin: 0%;
 }
