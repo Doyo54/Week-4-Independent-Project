@@ -56,6 +56,12 @@ body{
   right: 40%;
   text-align: center;
 }
+.explore{
+  color: #76323F;
+  font-size:100%;
+  
+  
+}
 
 .Hungry{
   color: #76323F;
@@ -104,10 +110,10 @@ h3{
 .col-md-3{
   position: absolute;
   text-align: center;
-  left: 83%;
+  left: 80%;
   top: 25%;
   font-size: large;
-  color: #76323F;
+  color: white;
 }
 
 h4{
