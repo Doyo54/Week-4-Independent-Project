@@ -1,8 +1,9 @@
-function Order( pizza, topping, crust, size, delivery) {
+function Order( pizza, topping, crust, size, amount, delivery) {
     this.selectedPizza = pizza;
     this.selectedTopping = topping;
     this.selectedCrust = crust;
     this.selectedsize = size;
+    this.selectedAmount=amount;
     this.deliveryOption = delivery;
   }
   
@@ -12,22 +13,24 @@ function Order( pizza, topping, crust, size, delivery) {
     this.customerMobile = mobileNumber;
   }
   
-  function Price( crustPrice, sizePrice){
-    this.priceForSelectedCrust = crustPrice;
+  function Price( sizePrice){
     this.priceForSelectedsize= sizePrice;
+
   }
   
   Price.prototype.subtotal = function(){
-    const toppingPrice =50
-    return this.priceForSelectedsize + toppingPrice + this.priceForSelectedCrust;
+    const toppingPrice =50;
+    const crustPrice =100;
+    return this.priceForSelectedsize + toppingPrice + crustPrice;
   }
   
-  function Bill(subtotal){        
+  function Bill(subtotal,amount){        
     this.subtotalGotten = subtotal;
+    this.amountOfPizza =amount
   }
   
   Bill.prototype.total = function(){
-    return this.subtotalGotten;
+    return this.subtotalGotten*this.amountOfPizza;
   }
 
 
@@ -36,14 +39,15 @@ function Order( pizza, topping, crust, size, delivery) {
       $('#empty').hide();
       $('#More').show();
       event.preventDefault();
-
+      
       var selectedPizza = parseInt($("select#pizza").val());
       var toppingSelected = parseInt($("select#topping").val());
       var crustSelected = parseInt($("select#crust").val());
       var selectedSize =parseInt($("select#size").val());
+      var amountSelected =$("select#amount").val();
       var selectedDeliveryOption =$("select#delivery").val();
 
-      if (!selectedPizza || !selectedSize || !crustSelected ||!toppingSelected ||!selectedDeliveryOption) {
+      if (!selectedPizza || !selectedSize || !crustSelected ||!toppingSelected ||!selectedDeliveryOption || !amountSelected) {
        alert("** Fill in all input fields to proceed!** ");
         return;
       } else{
@@ -53,15 +57,17 @@ function Order( pizza, topping, crust, size, delivery) {
       var toppings = ['Pepperoni', 'Mushroom', 'Sausage', 'Chicken'];
       var pizzas = ['Veg Tikka', 'Chicken Tikka', 'Peri Peri Chicken', 'BBQ Steak', 'Hawaiian'];
       var sizes = ['Small', 'Medium' , 'Large'];
+      var amounts =['1', '2', '3' ,'4', '5', '6' ];
       var deliveryOptions = ['Collect', 'Deliver'];
   
+      
       var sizePrices = [600, 700, 800];
-      var crustPrices = [50];
+
   
-  
+
       var priceofSelectedSize = sizePrices[selectedSize-1];
-      var priceOfCrustSelected = crustPrices[crustSelected];
-  
+
+  var nameOfAmount= amounts[amountSelected-1];
       var nameOfPizza = pizzas[selectedPizza-1];
       var nameOfTopping = toppings[toppingSelected-1];
       var nameOfCrust = crusts[crustSelected-1];
@@ -69,31 +75,30 @@ function Order( pizza, topping, crust, size, delivery) {
       var nameOfSize = sizes[selectedSize-1];
   
   
-      var newOrder = new Order( nameOfPizza, nameOfTopping, nameOfCrust, nameOfSize, nameOfDeliveryOption);
+      var newOrder = new Order( nameOfPizza,nameOfTopping ,nameOfCrust, nameOfSize ,nameOfAmount, nameOfDeliveryOption);
       const toppingPrice =50
-      var newPrices = new Price(priceofSelectedSize, toppingPrice , priceOfCrustSelected);
+      const crustPrice =100
+      var newPrices = new Price( priceofSelectedSize,  toppingPrice , crustPrice);
       var newSubtotal = newPrices.subtotal();
-      var newBill = new Bill(newSubtotal);
+      var newBill = new Bill(newSubtotal,amountSelected);
       var newTotal = newBill.total();
       if (selectedDeliveryOption == "2"){
         $('#address').show();
       }  
        
       else{
-        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newPrices.priceForSelectedCrust + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + newPrices.priceForSelectedsize + '\n' + 'Total: ' + newTotal +'ksh';
+        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize +' * '+newOrder.selectedAmount + ' = ' + newPrices.priceForSelectedsize + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +'ksh';
+      
       }
-        $('#add').submit( function(event){   
-          event.preventDefault();
-          document.getElementById("page2").reset();
-          
-        });
 
 
 
       $('#delivery-address').submit(function(event){
         event.preventDefault();
 
-        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newPrices.priceForSelectedCrust + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50ksh ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + newPrices.priceForSelectedsize + '\n' + 'Total: ' + newTotal + '\n'+'Delivery Fee ' + ' = ' + ' 100ksh ';
+        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize +' * '+newOrder.selectedAmount + ' = ' + newPrices.priceForSelectedsize + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +'ksh';
+      
+      
       });
       
       $('#checkout-form').submit(function(event){

@@ -125,7 +125,7 @@ h4{
   padding:2%;
 }
 
-#pizza, #size, #topping, #crust, #delivery, #address, #city, #estate, #mobile{
+#pizza, #size, #topping, #crust, #delivery, #address, #city, #estate, #mobile,#amount{
   width: 110%;
  font-size:80%;
 }
@@ -139,7 +139,7 @@ h4{
   font-size: xx-large;
   position: absolute;
   right:60%;
-  top: 30%;
+  top: 23%;
 }
 h5{
   position: absolute;
@@ -153,7 +153,7 @@ h5{
   font-size: xx-large;
   position: absolute;
   padding: 2%;
-  bottom: 50%;
+  bottom: 68%;
   left: 176%;
   font-size:100%;
 }
@@ -166,8 +166,8 @@ h6{
 #checkout{
 position: absolute;
 float: right;
-left: 130%;
-top: 60%;
+left: 120%;
+top: 44%;
 box-sizing: content-box;
 padding-left: 40%;
 
@@ -217,7 +217,7 @@ background-color:#DEB992;
   background-color:#051622;
   color:white;
   font-weight: bold;
-  font-size: large;
+  font-size: x-large;
 
 
 }
@@ -244,7 +244,7 @@ background-color:#DEB992;
   padding-top: 0%;
   margin: 10px;
   position: absolute;
-  bottom:40%;
+  bottom:52%;
   left: 320%;
   color: #76323F;
 }
