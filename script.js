@@ -82,7 +82,14 @@ function Order( pizza, topping, crust, size, delivery) {
       else{
         document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newPrices.priceForSelectedCrust + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + newPrices.priceForSelectedsize + '\n' + 'Total: ' + newTotal +'ksh';
       }
-    
+        $('#add').submit( function(event){   
+          event.preventDefault();
+          document.getElementById("page2").reset();
+          
+        });
+
+
+
       $('#delivery-address').submit(function(event){
         event.preventDefault();
 
