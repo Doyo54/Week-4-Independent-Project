@@ -29,18 +29,21 @@ function Order( pizza, topping, crust, size, delivery) {
   Bill.prototype.total = function(){
     return this.subtotalGotten;
   }
-  
+
+
   $(document).ready(function(){
     $('form#page2').submit( function(event){  
+      $('#empty').hide();
       event.preventDefault();
-      
+
       var selectedPizza = parseInt($("select#pizza").val());
       var toppingSelected = parseInt($("select#topping").val());
       var crustSelected = parseInt($("select#crust").val());
       var selectedSize =parseInt($("select#size").val());
       var selectedDeliveryOption =$("select#delivery").val();
+
       if (!selectedPizza || !selectedSize || !crustSelected ||!toppingSelected ||!selectedDeliveryOption) {
-       alert("** Please select a pizza, size, topping and crust** ");
+       alert("** Fill in all input fields to proceed!** ");
         return;
       } else{
       }
@@ -52,7 +55,7 @@ function Order( pizza, topping, crust, size, delivery) {
       var deliveryOptions = ['Collect', 'Deliver'];
   
       var sizePrices = [600, 700, 800];
-      var crustPrices = [100, 0];
+      var crustPrices = [50];
   
   
       var priceofSelectedSize = sizePrices[selectedSize-1];
@@ -70,13 +73,12 @@ function Order( pizza, topping, crust, size, delivery) {
       var newSubtotal = newPrices.subtotal();
       var newBill = new Bill(newSubtotal);
       var newTotal = newBill.total();
-  
       if (selectedDeliveryOption == "2"){
         $('#address').show();
       }  
        
       else{
-        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newPrices.priceForSelectedCrust + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50ksh ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + newPrices.priceForSelectedsize + '\n' + 'Total: ' + newTotal;
+        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newPrices.priceForSelectedCrust + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + newPrices.priceForSelectedsize + '\n' + 'Total: ' + newTotal +'ksh';
       }
     
   
@@ -85,7 +87,7 @@ function Order( pizza, topping, crust, size, delivery) {
 
         document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newPrices.priceForSelectedCrust + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50ksh ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + newPrices.priceForSelectedsize + '\n' + 'Total: ' + newTotal + '\n'+'Delivery Fee ' + ' = ' + ' 100ksh ';
       });
-  
+       
       $('form#checkout-form').submit(function(event){
         event.preventDefault();
   
@@ -104,9 +106,9 @@ function Order( pizza, topping, crust, size, delivery) {
         }
   
         document.getElementById("checkout-form").reset();
-        document.getElementById("page2").reset();
         document.getElementById("delivery-address").reset();
         $('#address').hide();
+        document.getElementById("page2").reset();
       });
     });
   });
