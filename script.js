@@ -1,4 +1,3 @@
-
 function Order( pizza, topping, crust, size, delivery) {
     this.selectedPizza = pizza;
     this.selectedTopping = topping;
