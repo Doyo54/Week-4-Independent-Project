@@ -87,7 +87,7 @@ function Order( pizza, topping, crust, size, amount, delivery,sizePrice) {
       }  
        
       else{
-        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize +' * '+newOrder.selectedAmount + ' = ' + newOrder.priceForSelectedsize + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +'ksh';
+        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newOrder.priceForSelectedsize + ' * ' + newOrder.selectedAmount + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +'ksh';
       
       }
 
@@ -96,7 +96,7 @@ function Order( pizza, topping, crust, size, amount, delivery,sizePrice) {
       $('#delivery-address').submit(function(event){
         event.preventDefault();
 
-        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize +' * '+newOrder.selectedAmount + ' = ' + newOrder.priceForSelectedsize + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +'ksh';
+        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newOrder.priceForSelectedsize + '*' + newOrder.selectedAmount + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +'ksh'+ '\n' + 'Delivery Fee' + '='+ ' 100ksh';
       
       
       });

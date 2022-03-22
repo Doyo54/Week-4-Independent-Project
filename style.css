@@ -1,5 +1,7 @@
 body{
     background-color: #051622;
+    font-family: 'Poppins';
+    font-style: normal;
     margin:0%;
     padding: 0%;
     width: fit-content;
@@ -154,8 +156,8 @@ h5{
   font-size: xx-large;
   position: absolute;
   padding: 2%;
-  bottom: 68%;
-  left: 176%;
+  bottom: 50%;
+  left: 220%;
   font-size:100%;
 }
 h6{
@@ -168,18 +170,15 @@ h6{
 position: absolute;
 float: right;
 left: 120%;
-top: 44%;
+top: 70%;
 box-sizing: content-box;
 padding-left: 40%;
 
 }
-thead{
-  position: absolute;
-  bottom: 90%;
-}
+
 .pizza3{
   position: absolute;
-  right: 75%;
+  right:78%;
   bottom: 30%;
   width: 25%;
 }
@@ -209,10 +208,10 @@ background-color:#DEB992;
 }
 .btn2{
   top:105%;
-  left: 30%;
+  left: 44%;
 }
 .btn3{
-  left: 40%;
+  left: 55%;
 }
 #order-summary{
   background-color:#051622;
@@ -234,22 +233,7 @@ background-color:#DEB992;
   left: 43%;
   font-size: x-large;
 }
-#More{
-  display: none;
-  width: 120px;
-  height:290px ;
-  border: 15px solid #76323F;
-  border-radius: 20px;
-  background-color:white;
-  padding: 50px;
-  padding-top: 0%;
-  margin: 10px;
-  position: absolute;
-  bottom:52%;
-  left: 320%;
-  color: #76323F;
-}
-hr{
-  width: 100%;
-  margin: 0%;
+#page2{
+  position: relative;
+  left: 10%;
 }
