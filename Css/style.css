@@ -32,10 +32,15 @@ body{
 }
 
 @media screen and (min-width: 700px) and (max-width: 992px) {
-  .intro {
-    margin-right: 20px;
-  }
+  footer {
+    top: 1400px;
+    }
+
+  .pizza3{
+    top: 100%;
+    } 
 }
+
 .index, .order{
   background-color:#76323F;
   border: none;
