@@ -87,7 +87,7 @@ function Order( pizza, topping, crust, size, amount, delivery,sizePrice) {
       }  
        
       else{
-        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newOrder.priceForSelectedsize + ' * ' + newOrder.selectedAmount + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +'ksh';
+        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newOrder.priceForSelectedsize + ' * ' + newOrder.selectedAmount + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +' ksh';
       
       }
 
@@ -96,7 +96,7 @@ function Order( pizza, topping, crust, size, amount, delivery,sizePrice) {
       $('#delivery-address').submit(function(event){
         event.preventDefault();
 
-        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newOrder.priceForSelectedsize + '*' + newOrder.selectedAmount + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +'ksh'+ '\n' + 'Delivery Fee' + '='+ ' 100ksh';
+        document.getElementById('order-summary').value = newOrder.selectedPizza + '-' + newOrder.selectedsize + ' = ' + newOrder.priceForSelectedsize + '*' + newOrder.selectedAmount + '\n' + newOrder.selectedTopping + ' topping ' + ' = ' + ' 50 ' + '\n' + newOrder.selectedCrust + ' crust  ' + ' = ' + '100'  + '\n' + 'Total: ' + newTotal +' ksh'+ '\n' + 'Delivery Fee' + '='+ ' 100 ksh';
       
       
       });
@@ -112,10 +112,10 @@ function Order( pizza, topping, crust, size, amount, delivery,sizePrice) {
   
         if(selectedDeliveryOption == "2"){
   
-          alert('Hi' + '. Your order will be delivered to ' + newAddress.estateName + ', ' + newAddress.cityName + ' in the next 30 minutes. We will call this number (' + newAddress.customerMobile + ') when we get there. Thank you for supporting AL-Pizza');
+          alert('Hi' + '. Your order will be delivered to ' + newAddress.estateName + ', ' + newAddress.cityName + ' in the next 30 minutes. We will call the number ' + newAddress.customerMobile + ' when we get there. Thank you for supporting AL-Pizza');
         }
         else{
-          alert('Hi' +', your order will be ready for collection in 25 minutes.  Thank you for being a loyal customer');
+          alert('Hi' +', your order will be ready for collection in 30 minutes.  Thank you for being a loyal customer');
         }
   
         document.getElementById("checkout-form").reset();
